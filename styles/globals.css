@@ -61,3 +61,12 @@ button:hover{
     background: black;
   }
 }
+
+@media(max-width: 600px){
+  h1, h2{
+    font-size: 16px;
+  }
+  p{
+    font-size: 14px;
+  }
+}

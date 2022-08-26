@@ -9,7 +9,6 @@
   justify-content: space-between;
 
   color: #313056;
-
 }
 
 .name{
@@ -67,24 +66,21 @@
   z-index : 3;
 }
 
-.image{
-  width: 200px;
-  height: 200px;
-}
 
 .button{
   font-size: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
+@media (max-width: 600px){
+
+  .contentContainer{
+    padding: 20px;
   }
-  .code {
-    background: #111;
+  .button{
+    font-size: 14px;
   }
-  .logo img {
-    filter: invert(1);
+  .callOut p{
+    font-size: 30px;
+    line-height: 50px;
   }
 }
