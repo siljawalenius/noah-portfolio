@@ -1,70 +1,134 @@
 import React, { memo, useState, useEffect, useRef } from "react";
 import styles from "./Collage.module.css";
+import image1 from "../../content/collageImg/img1.png";
+import image2 from "../../content/collageImg/img2.png";
+import image3 from "../../content/collageImg/img3.png";
+import image4 from "../../content/collageImg/img4.png";
+import image5 from "../../content/collageImg/img5.png";
+import image6 from "../../content/collageImg/img6.png";
+import image7 from "../../content/collageImg/img7.png";
+import image8 from "../../content/collageImg/img8.png";
 
-function Collage() {
+function Collage({needsClear, setNeedsClear}) {
   const canvasRef = useRef(null);
   const aimX = useRef(null); //store position of mouse
   const aimY = useRef(null);
-  const curX = useRef(null); //store position of image for delay
+  const curX = useRef(null);
   const curY = useRef(null);
   const i = useRef(0);
-  const images = useRef(null)
-
-images.current = [
-    "../../content/collageImg/Frame1.jpg",
-    "../../content/collageImg/Frame3.jpg",
-    "../../content/collageImg/Frame4.jpg",
-    "../../content/collageImg/Frame5.jpg",
-  ].map((src) => {
-    return React.createElement("img", { src : src}, null);
-  });
+  const images = useRef(null);
+  const isDragging = useRef(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth * 2;
-    canvas.height = window.innerHeight * 2;
+    canvas.height = window.innerHeight * 2; //let the canvas still work properly after resizing
+
+    canvas.style.width = window.innerWidth + "px";
+    canvas.style.height = window.innerHeight + "px";
 
     const ctx = canvas.getContext("2d");
-    ctx.scale(2, 2);
+    ctx.scale(2, 2); //retina friendly
 
-    console.log(images.current)
+    if (needsClear == true) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      setNeedsClear(false)
+    }
 
-    canvas.addEventListener("click", () => {
+    images.current = [
+      image1,
+      image2,
+      image3,
+      image4,
+      image5,
+      image6,
+      image7,
+      image8,
+    ].map((img) => {
+      const image = new Image();
+      image.src = img.src;
+      return image;
+    });
+
+    const handleClick = () => {
       i.current++;
       i.current >= images.current.length ? (i.current = 0) : null;
       console.log(i.current);
 
-        ctx.drawImage(images.current[i.current], 300, 300, 400, 400)
-      
+      const curImg = images.current[i.current];
+
+      let imgWidth = curImg.width / 4;
+      let imgHeight = curImg.height / 4;
+
+      if (curImg.complete) {
+        ctx.drawImage(
+          curImg,
+          aimX.current - imgWidth / 2,
+          aimY.current - imgHeight / 2,
+          imgWidth,
+          imgHeight
+        );
+      }
+    };
+
+    const handleMouseMove = (event) => {
+      aimX.current = event.pageX;
+      aimY.current = event.pageY;
+
+      if (curX.current === null) {
+        curX.current = event.pageX;
+        curY.current = event.pageY;
+      }
+    };
+
+    canvas.addEventListener("click", handleClick);
+
+    document.addEventListener("mousemove", (event) => {
+      handleMouseMove(event);
     });
 
+    document.addEventListener("mousedown", () => {
+      isDragging.current = true;
+    });
 
-    canvas.addEventListener("mousemove", (event)=>{
-        aimX.current = event.pageX
-        aimY.current = event.pageY
+    document.addEventListener("mouseup", () => {
+      isDragging.current = false;
+    });
 
-        if (curX.current === null){
-            curX.current = event.pageX
-            curY.current = event.pageY
+    const draw = () => {
+      const curImg = images.current[i.current];
+
+      let imgWidth = curImg.width / 4;
+      let imgHeight = curImg.height / 4;
+
+      console.log(isDragging.current);
+
+      if (curX.current) {
+        if (curImg.complete) {
+          ctx.drawImage(
+            curImg,
+            aimX.current - imgWidth / 2,
+            aimY.current - imgHeight / 2,
+            imgWidth,
+            imgHeight
+          );
         }
-    })
+        curX.current = curX.current + (aimX.current - curX.current) * 0.3;
+        curY.current = curY.current + (aimY.current - curY.current) * 0.3;
+      }
 
-  }, []);
+      requestAnimationFrame(draw);
+    };
 
-  const draw = () => {
-    let imgWidth = images[i.current].width;
-    let imgHeight = images[i.current].height;
+    return()=>{
+        canvas.removeEventListener("click", handleClick);
 
-    // if (curX.current){
-    //             context.drawImage(images[i], curX - (imgWidth/2), curY - imgHeight/2, imgWidth, imgHeight);
-    //     curX = curX + (aimX - curX) * 0.03
-    //     curY = curY + (aimY - curY) * 0.03
+        document.removeEventListener("mousemove", (event) => {
+          handleMouseMove(event);
+        });
+    }
 
-    // }
-
-
-    // requestAnimationFrame(draw)
-  };
+  }, [needsClear, setNeedsClear]);
 
   return (
     <div className={styles.collageContainer}>

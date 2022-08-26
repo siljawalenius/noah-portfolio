@@ -1,10 +1,11 @@
 {
     "landing": {
         "name": "Noah Melrose",
-        "title": "Designer and Creative",
+        "title": "Designer & Creative",
         "contact": "Say hello!",
         "year": "©2022",
         "callout": "Hey there! I'd love to show you what I've been 👀 ",
-        "link": "working on."
+        "link": "working on.",
+        "linkText": "https://www.instagram.com/noah_melrose/?hl=en"
     }
 }

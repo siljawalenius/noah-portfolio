@@ -1,8 +1,10 @@
+@import url(fonts.css);
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Favorit', Times, serif;
 }
 
 h1, h2{
@@ -10,10 +12,12 @@ h1, h2{
   font-weight: 400;
   padding: 0;
   margin: 0;
+  font-style: normal;
+
 }
 
 p{
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -22,6 +26,26 @@ p{
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button{
+  border: none;
+  background: none;
+  text-decoration: none;
+
+  font-family: 'Favorit', sans-serif;
+
+  padding: 2px 0;
+
+  border-bottom: 1px solid transparent;
+  transition: all 0.15s ease;
+
+  z-index: 1000;
+}
+
+button:hover{
+  color: #F1985D;
+  border-bottom: 2px solid #F1985D;
 }
 
 * {

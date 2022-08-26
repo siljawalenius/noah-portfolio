@@ -16,6 +16,11 @@
   text-decoration: underline;
 }
 
+.title{
+  text-decoration: underline;
+}
+
+
 .topInfo{
   position: relative;
   top: 0;
@@ -38,23 +43,37 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 400px;
+  max-width: 700px;
   text-align: center;
+}
 
+.callOut p{
+  font-size: 50px;
+}
+
+.play{
+  font-size: 24px;
 }
 
 .link{
-  background-color: greenyellow;
+  background-color: #B6FF18;
   text-decoration: underline;
+  display: inline-block;
+  padding: 0 15px;
+  border-radius: 100px;
 }
 
 .callOut, .footer, .topInfo{
   z-index : 3;
 }
 
-.img{
+.image{
   width: 200px;
   height: 200px;
+}
+
+.button{
+  font-size: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
