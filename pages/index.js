@@ -4,16 +4,33 @@ import styles from "../styles/Home.module.css";
 import copy from "../content/copy.json";
 
 import Collage from "../components/collage/Collage";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const COPY = copy.landing;
-
+  const linkRef = useRef(null);
   const [needsClear, setNeedsClear] = useState(false);
+  const [isHovered, setIsHovered] = useState(false)
 
   const handleClick = (e) => {
     setNeedsClear(true)
   };
+
+  useEffect(()=>{
+    const linkEl = linkRef.current
+    linkEl.addEventListener('mouseover', ()=>{
+      setIsHovered(true)
+    })
+
+    linkEl.addEventListener('mouseout', ()=>{
+      if(isHovered){
+        setIsHovered(false)
+      }
+    })
+
+    console.log(isHovered)
+  },[isHovered])
+
 
   return (
     <div className={styles.container}>
@@ -28,8 +45,14 @@ export default function Home() {
       <div className={styles.contentContainer}>
         <div className={styles.topInfo}>
           <h1 className={styles.name}>{COPY.name}</h1>
-          {/* <button className={styles.play}> play 🎲</button> */}
-          <p> click to play 🎲</p>
+          <p> 
+            <span className={styles.desktopOnly}>
+            click to play 🎲
+            </span>
+
+            <span className = {styles.mobileOnly}> 🎲 </span> 
+
+          </p>
           <h2 className = {styles.title}>{COPY.title}</h2>
         </div>
 
@@ -39,7 +62,8 @@ export default function Home() {
           </a>
 
           <button className={styles.button} onClick ={handleClick}>
-            clear playground!
+            <span className = {styles.desktopOnly}>clear playground!</span>
+            <span className = {styles.mobileOnly}> 🧹 </span>
           </button>
 
           <p> {COPY.year}</p>
@@ -49,8 +73,10 @@ export default function Home() {
       <div className={styles.callOut}>
         <p>
           {COPY.callout}
-          <a href={COPY.linkText} target="_blank" rel = "noreferrer">
-            <span className={styles.link}>{COPY.link}</span>
+          {isHovered && <span className = {styles.flipEyes}> {COPY.eyes} </span> }
+            {!isHovered && <span className = {styles.eyes}> {COPY.eyes} </span> }
+          <a className = {styles.linkWrap} href={COPY.linkText} target="_blank" rel = "noreferrer">
+            <span className={styles.link} ref={linkRef}>{COPY.link}</span>
           </a>
         </p>
       </div>

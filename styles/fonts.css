@@ -5,19 +5,8 @@
   }
 
   @font-face{
-    font-family: "Favorit";
-    font-style: bold;
-    src: url("../content/fonts/Favorit-Bold.woff") format("woff"), url("../content/fonts/Favorit-Bold.woff2") format("woff2");
-  }
-
-  @font-face{
-    font-family: "Favorit";
-    font-style: light;
-    src: url("../content/fonts/Favorit-Light.woff") format("woff"), url("../content/fonts/Favorit-Light.woff2") format("woff2");
-  }
-
-  @font-face{
-    font-family: "Favorit";
+    font-family: "Favorit Liner";
     font-style:normal;
-    src: url("../content/fonts/Favorit-Book.woff") format("woff"), url("../content/fonts/Favorit-Book.woff2") format("woff2");
+    src: url("../content/fonts/Favorit-Regular_Lining.woff") format("woff"), url("../content/fonts/Favorit-Regular_Lining.woff2") format("woff2");
   }
+

@@ -5,6 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Favorit', Times, serif;
+  letter-spacing: 1px;
 }
 
 h1, h2{
@@ -13,7 +14,6 @@ h1, h2{
   padding: 0;
   margin: 0;
   font-style: normal;
-
 }
 
 p{
@@ -26,6 +26,13 @@ p{
 a {
   color: inherit;
   text-decoration: none;
+
+  padding: 2px 0;
+
+  border-bottom: 1px solid transparent;
+  transition: all 0.15s ease;
+
+  z-index: 1000;
 }
 
 button{
@@ -43,7 +50,7 @@ button{
   z-index: 1000;
 }
 
-button:hover{
+button:hover, a:hover{
   color: #F1985D;
   border-bottom: 2px solid #F1985D;
 }
@@ -52,19 +59,9 @@ button:hover{
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-@media(max-width: 600px){
+@media(max-width: 700px){
   h1, h2{
-    font-size: 16px;
+    font-size: 18px;
   }
   p{
     font-size: 14px;
