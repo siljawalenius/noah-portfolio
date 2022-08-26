@@ -28,8 +28,15 @@ export default function Home() {
       }
     });
 
-    console.log(isHovered);
   }, [isHovered]);
+
+  useEffect(()=>{
+    // signature :) 
+    console.log("🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️")
+    console.log("✨✨ coded with love by @siljawalenius ✨✨")
+    console.log("✨✨ https://www.siljawalenius.com/ ✨✨")
+    console.log("🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️")
+  }, [])
 
   return (
     <div className={styles.container}>

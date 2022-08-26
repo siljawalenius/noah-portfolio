@@ -53,7 +53,6 @@ function Collage({needsClear, setNeedsClear}) {
     const handleClick = () => {
       i.current++;
       i.current >= images.current.length ? (i.current = 0) : null;
-      console.log(i.current);
 
       const curImg = images.current[i.current];
 
@@ -101,7 +100,6 @@ function Collage({needsClear, setNeedsClear}) {
       let imgWidth = curImg.width / 4;
       let imgHeight = curImg.height / 4;
 
-      console.log(isDragging.current);
 
       if (curX.current) {
         if (curImg.complete) {
