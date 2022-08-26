@@ -1,12 +1,20 @@
 {
+
     "landing": {
         "name": "Noah Melrose",
         "title": "Designer & Creative",
         "contact": "say hello! 👋 ",
+        "mailAddy": "mailto:melrosenoah@gmail.com",
         "year": "©2022",
         "callout": "Hey there! I'd love to show you what I've been ",
         "eyes": "👀",
         "link": " working on.",
-        "linkText": "https://www.instagram.com/noah_melrose/?hl=en"
+        "linkText": "https://www.instagram.com/noah_melrose/?hl=en",
+
+        "clearDesktop":"clear playground!",
+        "clearMobile":"🧹",
+
+        "playDesktop": "click anywhere to play 🎲",
+        "playMobile": "🎲"
     }
 }
