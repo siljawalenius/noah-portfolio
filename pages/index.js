@@ -31,11 +31,6 @@ export default function Home() {
 
   }, [isHovered]);
 
-  useEffect(()=>{
-    contentContainerRef.current.style.width = window.innerWidth + "px"
-    contentContainerRef.current.style.height = window.innerHeight + "px"
-
-  },[])
 
   useEffect(()=>{
     // signature :) 
