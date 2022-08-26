@@ -106,6 +106,7 @@ a.linkWrap{
 
   .contentContainer{
     padding: 24px;
+    max-height: calc(100vh - 100px);
   }
   .button{
     font-size: 14px;

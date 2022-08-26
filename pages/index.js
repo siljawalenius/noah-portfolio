@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Home() {
   const COPY = copy.landing;
   const linkRef = useRef(null);
+  const contentContainerRef = useRef(null)
   const [needsClear, setNeedsClear] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -31,6 +32,12 @@ export default function Home() {
   }, [isHovered]);
 
   useEffect(()=>{
+    contentContainerRef.current.style.width = window.innerWidth + "px"
+    contentContainerRef.current.style.height = window.innerHeight + "px"
+
+  },[])
+
+  useEffect(()=>{
     // signature :) 
     console.log("🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️")
     console.log("✨✨ coded with love by @siljawalenius ✨✨")
@@ -48,12 +55,12 @@ export default function Home() {
 
       <Collage needsClear={needsClear} setNeedsClear={setNeedsClear} />
 
-      <div className={styles.contentContainer}>
+      <div className={styles.contentContainer} ref ={contentContainerRef}>
         <div className={styles.topInfo}>
           <h1 className={styles.name}>{COPY.name}</h1>
           <p>
             <span className={styles.desktopOnly}>{COPY.playDesktop}</span>
-            <span className={styles.mobileOnly}> {COPY.clearMobile} </span>
+            <span className={styles.mobileOnly}> {COPY.playMobile} </span>
           </p>
           <h2 className={styles.title}>{COPY.title}</h2>
         </div>
