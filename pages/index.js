@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Home() {
   const COPY = copy.landing;
   const linkRef = useRef(null);
-  const contentContainerRef = useRef(null)
+  const contentContainerRef = useRef(null);
   const [needsClear, setNeedsClear] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -28,17 +28,15 @@ export default function Home() {
         setIsHovered(false);
       }
     });
-
   }, [isHovered]);
 
-
-  useEffect(()=>{
-    // signature :) 
-    console.log("🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️")
-    console.log("✨✨ coded with love by @siljawalenius ✨✨")
-    console.log("✨✨ https://www.siljawalenius.com/ ✨✨")
-    console.log("🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️")
-  }, [])
+  useEffect(() => {
+    // signature :)
+    console.log("🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️");
+    console.log("✨✨ coded with love by @siljawalenius ✨✨");
+    console.log("✨✨ https://www.siljawalenius.com/ ✨✨");
+    console.log("🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️🥥🍄🌸🌙🌺🌈🍏🍓🥑⛺️");
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -50,10 +48,10 @@ export default function Home() {
 
       <Collage needsClear={needsClear} setNeedsClear={setNeedsClear} />
 
-      <div className={styles.contentContainer} ref ={contentContainerRef}>
+      <div className={styles.contentContainer} ref={contentContainerRef}>
         <div className={styles.topInfo}>
           <h1 className={styles.name}>{COPY.name}</h1>
-          <p className = {styles.playParagraph}>
+          <p className={styles.playParagraph}>
             <span className={styles.desktopOnly}>{COPY.playDesktop}</span>
             <span className={styles.mobileOnly}> {COPY.playMobile} </span>
           </p>
@@ -61,15 +59,12 @@ export default function Home() {
         </div>
 
         <footer className={styles.footer}>
-          <div className = {styles.mail}>
-          <a href={COPY.mailAddy} target="_blank"
-            rel="noreferrer">
-            <p> {COPY.contact}</p>
-          </a>
-          <span className={styles.wave}>{COPY.wave}</span>
+          <div className={styles.mail}>
+            <a href={COPY.mailAddy} target="_blank" rel="noreferrer">
+              <p> {COPY.contact}</p>
+            </a>
+            <span className={styles.wave}>{COPY.wave}</span>
           </div>
-
-
 
           <button className={styles.button} onClick={handleClick}>
             <span className={styles.desktopOnly}>{COPY.clearDesktop}</span>
