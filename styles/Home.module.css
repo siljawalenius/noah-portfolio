@@ -78,8 +78,12 @@
   mix-blend-mode: difference;
 }
 
-.link{
 
+.beenText{
+  margin-right: 7px;
+}
+
+.link{
   font-family:'Favorit Liner', sans-serif;
   display: inline-block;
 
@@ -145,6 +149,7 @@ a.linkWrap{
     display: inline-block;
     font-size: 24px;
   }
+  
 }
 
 @media (max-width: 700px){
@@ -161,7 +166,12 @@ a.linkWrap{
   }
 
   .callOut{
-    width: 316px;
+    width: 356px;
+    text-align: center;
+  }
+
+  .singleLine{
+    justify-content: center;
   }
 
   .name{
@@ -173,10 +183,24 @@ a.linkWrap{
     text-align: right;
   }
 
-  .link{
-    padding: 3px 12px;
-    margin-left: 3px;
+  .beenText{
+    margin-right: 5px;
   }
+
+  .singleLine{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  a.linkWrap{
+    padding: 2px 12px 2px 12px;
+    margin-left: 5px;
+    top: 0px;
+  }
+
+
   .topInfo{
     align-items: center;
   }

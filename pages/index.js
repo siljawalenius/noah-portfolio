@@ -53,7 +53,6 @@ export default function Home() {
           <h1 className={styles.name}>{COPY.name}</h1>
           <p className={styles.playParagraph}>
             <span className={styles.desktopOnly}>{COPY.playDesktop}</span>
-            <span className={styles.mobileOnly}> {COPY.playMobile} </span>
           </p>
           <h2 className={styles.title}>{COPY.title}</h2>
         </div>
@@ -78,18 +77,30 @@ export default function Home() {
       <div className={styles.callOut}>
         <p>
           {COPY.callout}
-          {isHovered && <span className={styles.flipEyes}> {COPY.eyes} </span>}
-          {!isHovered && <span className={styles.eyes}> {COPY.eyes} </span>}
-          <a
-            className={styles.linkWrap}
-            href={COPY.linkText}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className={styles.link} ref={linkRef}>
-              {COPY.link}
-            </span>
-          </a>
+          <span className={styles.singleLine}>
+            <span className ={styles.beenText}>{COPY.calloutSingleLine.text}</span>
+            
+            {isHovered && (
+              <span className={styles.flipEyes}>
+                {COPY.calloutSingleLine.eyes}
+              </span>
+            )}
+            {!isHovered && (
+              <span className={styles.eyes}>
+                {COPY.calloutSingleLine.eyes}
+              </span>
+            )}
+            <a
+              className={styles.linkWrap}
+              href={COPY.calloutSingleLine.linkText}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className={styles.link} ref={linkRef}>
+                {COPY.calloutSingleLine.link}
+              </span>
+            </a>
+          </span>
         </p>
       </div>
     </div>

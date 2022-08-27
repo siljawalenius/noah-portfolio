@@ -8,10 +8,13 @@
         "wave": " 👋",
         "mailAddy": "mailto:melrosenoah@gmail.com",
         "year": "©2022",
-        "callout": "Hey there! I'd love to show you what I've been ",
-        "eyes": "👀",
-        "link": " working on.",
-        "linkText": "https://drive.google.com/file/d/1nhlNM6sGfual-OCGQEg9RywYBjoi3GHq/view",
+        "callout": "Hey there! I'd love to show you what I've ",
+        "calloutSingleLine":{
+            "text": "been",
+            "eyes": " 👀",
+            "link": " working on.",
+            "linkText": "https://drive.google.com/file/d/1nhlNM6sGfual-OCGQEg9RywYBjoi3GHq/view"    
+        },
 
         "clearDesktop":"clear playground!",
         "clearMobile":"🧹",
