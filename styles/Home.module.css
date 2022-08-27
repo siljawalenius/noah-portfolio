@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  color: #313056;
+  color: #000;
 }
 
 .name{
@@ -68,25 +68,35 @@
 }
 
 .link{
-  background-color: #B6FF18;
+
   font-family:'Favorit Liner', sans-serif;
   display: inline-block;
-  padding: 5px 20px;
-  margin-left: 10px;
-  border-radius: 100px;
 
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
-.link:hover{
+a.linkWrap{
+  border-bottom: none;
+  background-color: #B6FF18;
+
+  padding: 2px 20px 2px 20px;
+  margin-left: 10px;
+  border-radius: 100px;
+  position: relative;
+  top: 3px;
+}
+
+.linkWrap:hover{
   background-color: #F1985D;
   color: #000;
 }
 
-a.linkWrap{
-  border-bottom: none;
+.link{
+  position: relative;
+  top: -3px;
 }
+
 
 .eyes{
   display: inline-block;
@@ -107,7 +117,8 @@ a.linkWrap{
   font-size: 20px;
   cursor: pointer;
   position: relative;
-  left: -35px
+  left: -35px;
+  border-bottom:  2px solid transparent;
 }
 
 .mobileOnly{

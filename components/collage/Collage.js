@@ -8,8 +8,20 @@ import image5 from "../../content/collageImg/img5.png";
 import image6 from "../../content/collageImg/img6.png";
 import image7 from "../../content/collageImg/img7.png";
 import image8 from "../../content/collageImg/img8.png";
+import image9 from "../../content/collageImg/img9.png";
+import image10 from "../../content/collageImg/img10.png";
+import image11 from "../../content/collageImg/img11.png";
+import image12 from "../../content/collageImg/img12.png";
+import image13 from "../../content/collageImg/img13.png";
+import image14 from "../../content/collageImg/img14.png";
+import image15 from "../../content/collageImg/img15.png";
+import image16 from "../../content/collageImg/img16.png";
+import image17 from "../../content/collageImg/img17.png";
+import image18 from "../../content/collageImg/img18.png";
+import image19 from "../../content/collageImg/img19.png";
+import image20 from "../../content/collageImg/img20.png";
 
-function Collage({needsClear, setNeedsClear}) {
+function Collage({ needsClear, setNeedsClear }) {
   const canvasRef = useRef(null);
   const aimX = useRef(null); //store position of mouse
   const aimY = useRef(null);
@@ -18,7 +30,6 @@ function Collage({needsClear, setNeedsClear}) {
   const i = useRef(0);
   const images = useRef(null);
   const isDragging = useRef(false);
-
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -33,7 +44,7 @@ function Collage({needsClear, setNeedsClear}) {
 
     if (needsClear == true) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      setNeedsClear(false)
+      setNeedsClear(false);
     }
 
     images.current = [
@@ -45,6 +56,18 @@ function Collage({needsClear, setNeedsClear}) {
       image6,
       image7,
       image8,
+      image9,
+      image10,
+      image11,
+      image12,
+      image13,
+      image14,
+      image15,
+      image16,
+      image17,
+      image18,
+      image19,
+      image20,
     ].map((img) => {
       const image = new Image();
       image.src = img.src;
@@ -59,6 +82,11 @@ function Collage({needsClear, setNeedsClear}) {
 
       let imgWidth = curImg.width / 4;
       let imgHeight = curImg.height / 4;
+
+      if (window.innerWidth <= 800) {
+        imgWidth = curImg.width / 5.5;
+        imgHeight = curImg.height / 5.5;
+      }
 
       if (curImg.complete) {
         ctx.drawImage(
@@ -101,7 +129,6 @@ function Collage({needsClear, setNeedsClear}) {
       let imgWidth = curImg.width / 4;
       let imgHeight = curImg.height / 4;
 
-
       if (curX.current) {
         if (curImg.complete) {
           ctx.drawImage(
@@ -119,14 +146,13 @@ function Collage({needsClear, setNeedsClear}) {
       requestAnimationFrame(draw);
     };
 
-    return()=>{
-        canvas.removeEventListener("click", handleClick);
+    return () => {
+      canvas.removeEventListener("click", handleClick);
 
-        document.removeEventListener("mousemove", (event) => {
-          handleMouseMove(event);
-        });
-    }
-
+      document.removeEventListener("mousemove", (event) => {
+        handleMouseMove(event);
+      });
+    };
   }, [needsClear, setNeedsClear]);
 
   return (

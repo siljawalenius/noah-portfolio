@@ -47,6 +47,8 @@ button{
   border-bottom: 1px solid transparent;
   transition: all 0.15s ease;
 
+  letter-spacing: 1px;
+
   z-index: 1000;
 }
 
