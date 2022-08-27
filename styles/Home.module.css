@@ -46,11 +46,22 @@
   /* TODO: MAKE A PADDING GLOBAL */
 }
 
+.mail{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.wave{
+  margin-left: 5px;
+  position: relative;
+  top: -1px
+}
+
 .play{
   font-size: 24px;
   cursor: default;
 }
-
 
 .callOut{
   position: fixed;

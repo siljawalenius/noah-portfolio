@@ -61,10 +61,15 @@ export default function Home() {
         </div>
 
         <footer className={styles.footer}>
+          <div className = {styles.mail}>
           <a href={COPY.mailAddy} target="_blank"
             rel="noreferrer">
             <p> {COPY.contact}</p>
           </a>
+          <span className={styles.wave}>{COPY.wave}</span>
+          </div>
+
+
 
           <button className={styles.button} onClick={handleClick}>
             <span className={styles.desktopOnly}>{COPY.clearDesktop}</span>
