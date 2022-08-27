@@ -43,8 +43,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Noah Melrose</title>
-        <meta name="description" content="Graphic Designer" />
+        <title>{COPY.pageTitle}</title>
+        <meta name="description" content={COPY.metaDescription} />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
@@ -53,7 +53,7 @@ export default function Home() {
       <div className={styles.contentContainer} ref ={contentContainerRef}>
         <div className={styles.topInfo}>
           <h1 className={styles.name}>{COPY.name}</h1>
-          <p>
+          <p className = {styles.playParagraph}>
             <span className={styles.desktopOnly}>{COPY.playDesktop}</span>
             <span className={styles.mobileOnly}> {COPY.playMobile} </span>
           </p>

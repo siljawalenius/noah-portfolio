@@ -19,6 +19,7 @@ function Collage({needsClear, setNeedsClear}) {
   const images = useRef(null);
   const isDragging = useRef(false);
 
+
   useEffect(() => {
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth * 2;
