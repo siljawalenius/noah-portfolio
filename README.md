@@ -1,3 +1,18 @@
+## A non-coder's guide to changing links and text 
+Hello! If you're reading this, you're probably trying to change some text on this website! Here's how: 
+**First, switch to the dev branch of this repo. you can do that by clicking the dropdown above (it probably says main right now) and selecting dev**
+** or, click here to switch to dev: https://github.com/siljawalenius/noah-portfolio/tree/dev ** 
+1. open the "content" folder above : https://github.com/siljawalenius/noah-portfolio/tree/main/content
+2. open the folder called copy.json: https://github.com/siljawalenius/noah-portfolio/blob/main/content/copy.json
+3. click on the pencil in the top right hand corner of the file to edit. This will open an in-browser editor. 
+4. Change whatever text or links out you want. 
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
