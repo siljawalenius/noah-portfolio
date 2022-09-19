@@ -1,17 +1,21 @@
 ## A non-coder's guide to changing links and text 
 Hello! If you're reading this, you're probably trying to change some text on this website! Here's how: 
+
 **First, switch to the dev branch of this repo. you can do that by clicking the dropdown above (it probably says main right now) and selecting dev**
 **or, click here to switch to dev: https://github.com/siljawalenius/noah-portfolio/tree/dev** 
-1. open the "content" folder above : https://github.com/siljawalenius/noah-portfolio/tree/main/content
-2. open the folder called copy.json: https://github.com/siljawalenius/noah-portfolio/blob/main/content/copy.json
+
+**To change copy, you should ONLY be changing content in the copy.json file. Do not change any other files in this project** 
+
+1. open the "content" folder above : https://github.com/siljawalenius/noah-portfolio/tree/dev/content
+2. open the folder called copy.json: https://github.com/siljawalenius/noah-portfolio/blob/dev/content/copy.json
 3. click on the pencil in the top right hand corner of the file to edit. This will open an in-browser editor. 
-4. Change whatever text or links out you want
+4. Change whatever text or links out you want. If you're changing collage images, just make sure the **image size,name, and filetype** is the same. Upload the new image to the collageImg folder (https://github.com/siljawalenius/noah-portfolio/tree/dev/content/collageImg), and delete the old one. 
 5. Check your work!! Save the file, then after a few minutes, check your work on this link: https://noah-melrose-git-dev-siljawalenius.vercel.app/ Pay special attention to links - do they all go to the right places? 
 6. If things don't look right, go back and edit. If they really don't look right, don't panic. Nothing on this link is on your actual website yet. 
 7. If everything is good, we can add these changes to the live site! 
 
 ### Adding changes to the live site
-1. If you don't feel comfy here, let me know! This is a very quick thing for me to do 
+1. **If you don't feel comfy here, let me know! This is a very quick thing for me to do** 
 2. If you feel good, click above where it says "2 branches" (it may say 2, 3 or more depending on where in the project we are) This is right next to the dropdown we clicked on earlier on the home page 
 3. This will bring you to a page listing all the branches. Find the branch that says "dev" and click the button to the right of it that says "new pull request" 
 4. change the **base to main** and the **compare to dev**. The arrow should be pointing FROM dev TO main. 
@@ -20,7 +24,7 @@ Hello! If you're reading this, you're probably trying to change some text on thi
 7. Once checks are complete, click "merge pull request". This is a green button at the bottom. Give it one last check if you want, then click "confirm merge" 
 8. If you're given the option to delete dev, do NOT do it. 
 
-Congrats! You're done! Changes should show up on your live site within 5-10 minutes 
+### ✨🌈🎉 Congrats! You're done! Changes should show up on your live site within 5-10 minutes ✨🌈🎉
 
 
 
