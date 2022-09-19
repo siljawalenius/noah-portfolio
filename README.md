@@ -1,7 +1,7 @@
 ## A non-coder's guide to changing links and text 
 Hello! If you're reading this, you're probably trying to change some text on this website! Here's how: 
 
-**you're on the dev branch!**
+### First, switch to the dev branch of this repo. you can do that by clicking the dropdown above (it probably says main right now) and selecting dev or, click here to switch to dev: https://github.com/siljawalenius/noah-portfolio/tree/dev
 
 **To change copy, you should ONLY be changing content in the copy.json file. Do not change any other files in this project** 
 
