@@ -15,7 +15,7 @@ Hello! If you're reading this, you're probably trying to change some text on thi
 7. If everything is good, we can add these changes to the live site! 
 
 ### Adding changes to the live site
-1. If you don't feel comfy here, let me know! This is a very quick thing for me to do 
+1. **If you don't feel comfy here, let me know! This is a very quick thing for me to do** 
 2. If you feel good, click above where it says "2 branches" (it may say 2, 3 or more depending on where in the project we are) This is right next to the dropdown we clicked on earlier on the home page 
 3. This will bring you to a page listing all the branches. Find the branch that says "dev" and click the button to the right of it that says "new pull request" 
 4. change the **base to main** and the **compare to dev**. The arrow should be pointing FROM dev TO main. 
@@ -24,7 +24,7 @@ Hello! If you're reading this, you're probably trying to change some text on thi
 7. Once checks are complete, click "merge pull request". This is a green button at the bottom. Give it one last check if you want, then click "confirm merge" 
 8. If you're given the option to delete dev, do NOT do it. 
 
-### ✨🌈🎉Congrats! You're done! Changes should show up on your live site within 5-10 minutes ✨🌈🎉
+### ✨🌈🎉 Congrats! You're done! Changes should show up on your live site within 5-10 minutes ✨🌈🎉
 
 
 
