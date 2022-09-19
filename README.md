@@ -24,7 +24,7 @@ Hello! If you're reading this, you're probably trying to change some text on thi
 7. Once checks are complete, click "merge pull request". This is a green button at the bottom. Give it one last check if you want, then click "confirm merge" 
 8. If you're given the option to delete dev, do NOT do it. 
 
-Congrats! You're done! Changes should show up on your live site within 5-10 minutes 
+###✨🌈🎉Congrats! You're done! Changes should show up on your live site within 5-10 minutes ✨🌈🎉
 
 
 
