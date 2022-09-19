@@ -16,6 +16,11 @@ Hello! If you're reading this, you're probably trying to change some text on thi
 3. This will bring you to a page listing all the branches. Find the branch that says "dev" and click the button to the right of it that says "new pull request" 
 4. change the **base to main** and the **compare to dev**. The arrow should be pointing FROM dev TO main. 
 5. give your changes a helpful title (eg. "changing the link to my new portfolio") and click the green button that says "create pull request"
+6. Finally, wait for the checks to complete (you'll see 2 green checkmarks when they do)
+7. Once checks are complete, click "merge pull request". This is a green button at the bottom. Give it one last check if you want, then click "confirm merge" 
+8. If you're given the option to delete dev, do NOT do it. 
+
+Congrats! You're done! Changes should show up on your live site within 5-10 minutes 
 
 
 
