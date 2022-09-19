@@ -4,6 +4,8 @@ Hello! If you're reading this, you're probably trying to change some text on thi
 **First, switch to the dev branch of this repo. you can do that by clicking the dropdown above (it probably says main right now) and selecting dev**
 **or, click here to switch to dev: https://github.com/siljawalenius/noah-portfolio/tree/dev** 
 
+**As a failsafe, the rest of these instructions are ONLY available on the dev branch**
+
 **To change copy, you should ONLY be changing content in the copy.json file. Do not change any other files in this project** 
 
 1. open the "content" folder above : https://github.com/siljawalenius/noah-portfolio/tree/dev/content
@@ -25,7 +27,6 @@ Hello! If you're reading this, you're probably trying to change some text on thi
 8. If you're given the option to delete dev, do NOT do it. 
 
 ### ✨🌈🎉 Congrats! You're done! Changes should show up on your live site within 5-10 minutes ✨🌈🎉
-
 
 
 
